@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="icon" type="image/x-icon" href="https://www.vhv.rs/dpng/d/444-4449620_blue-cart-icon-png-transparent-png.png">
+  <title>Orders</title>
+
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+  <script src="https://kit.fontawesome.com/7b5528ef15.js" crossorigin="anonymous"></script>
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lemon&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Train+One&display=swap" rel="stylesheet">
+  {% load static %}
+<style>
+
+
+   body
+    {
+      background: url("{% static 'images/c.png'%}");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+
+ .collapse a:hover
+  {
+      animation: myfirst 2s 2;
+  animation-direction:all;
+  }
+  @keyframes myfirst {
+  0%   {border-bottom: 3px solid #3498DB;}
+  25%  { border-bottom: 3px solid #3498DB;}
+  50%  {border-bottom: 3px solid #3498DB;}
+  75%  { border-bottom: 3px solid #3498DB;}
+  100% {border-bottom: 3px solid #3498DB;}
+}
+.tit
+{
+  color:#fff;
+  margin:15px;
+  text-align: center;
+  font-size: 25px;
+  font-family: 'Train One', cursive;
+
+
+}
+.cart
+{
+  margin: 80px auto;
+background-color:white;
+}
+table
+{
+  width: 100%;
+  border-collapse: collapse;
+
+}
+.cart-info
+{
+  display: flex;
+  flex-wrap: wrap;
+
+
+}
+th
+{
+  text-align: left;
+  padding: 5px;
+  color: #fff;
+  background: #ff523b;
+  font-weight: normal;
+
+}
+td
+{
+  padding: 10px 5px;
+  background-color: #fff;
+}
+td input
+{
+  width: 90px;
+  height: 30px;
+  padding: 5px;
+
+}
+td a
+{
+  color: #ff523b;
+  font-size: 12px;
+}
+td img
+{
+  width:80px;
+  height: 80px;
+  margin-right: 10px;
+
+}
+.total-price
+{
+  display: flex;
+  justify-content: flex-end;
+
+}
+.total-price table
+{
+  border-top:3px solid #ff532b;
+  width: 100%;
+  max-width: 560px;
+  margin-top: 20px;
+}
+td:last-child
+{
+  text-align: right;
+}
+th:last-child
+{
+  text-align: right;
+}
+.message
+{
+list-style:none;
+width:100%;
+}
+</style>
+</head>
+<body>
+ {% for message in messages %}
+    <div class="message">
+       <div class="alert alert-primary" role="alert">
+{{message}}
+</div>
+    </div>
+    {% endfor %}
+<nav class="navbar navbar-expand-lg navbar-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="home" style="color:#2ECC71;font-size: 25px;font-family: Arial Black;"><i class="fas fa-shopping-cart" style="color:#fff;"></i> productdekho.com</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon" style="color: #fff;"></span>
+
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="home" style="color: #fff;font-family: 'Lemon', cursive;font-size: 15px;background: none;
+">Home</a>
+        </li>
+
+          <li class="nav-item">
+          <a class="nav-link" href="about" tabindex="-1" aria-disabled="true" style="color: #fff;font-family: 'Lemon', cursive;font-size: 15px;">About Us</a>
+        </li>
+
+        <li class="nav-item dropdown">
+
+          <a class="nav-link dropdown-toggle" href="product" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: #fff;font-family: 'Lemon', cursive;font-size: 15px;">
+           Products
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="color: #fff;font-family: 'Lemon', cursive;font-size: 15px;">
+            <li><a class="dropdown-item" href="product">All Categories</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="mobiles">Mobiles,Computers</a></li>
+            <li><a class="dropdown-item" href="electronics">TV,Appliances,Electronics</a></li>
+            <li><hr class="dropdown-divider"></li>
+
+            <li><a class="dropdown-item" href="jewellary">Jewellary</a></li>
+            <li><hr class="dropdown-divider"></li>
+                 <li><a class="dropdown-item" href="book">Books</a></li>
+
+          </ul>
+        </li>
+
+          <li class="nav-item">
+          <a class="nav-link" href="contact" tabindex="-1" aria-disabled="true" style="color: #fff;font-family: 'Lemon', cursive;font-size: 15px;">Contact Us</a>
+        </li>
+
+
+
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search Here" aria-label="Search"  style="border:2px solid #566573;">
+        <button type="button" class="btn btn-primary">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+   <hr class="dropdown-divider" style="color: #fff;">
+<p class="tit">Your Cart</p>
+
+
+  <table>
+    <tr>
+      <th>Product</th>
+  <th>Price</th>
+
+      <th></th>
+        <th></th>
+    </tr>
+{% for i in data %}
+    <tr>
+        <form action="cancel1" method="POST">
+{% csrf_token %}
+      <input type="hidden" value="{{i.cid}}" name="cno">
+      <td>
+
+        <div class="cart-info">
+          <img src="{{i.pid.pimg.url}}">
+          <div>
+            <p>{{i.pid.pname}}</p>
+            <p style="color: #111;">{{i.pid.pdisc}}</p>
+
+          </div>
+        </div>
+      </td>
+      <td>Rs.{{i.pid.price}}/-</td>
+
+
+        <td>
+            <button type="submit" class="btn btn-danger">Remove</button>
+        </td>
+    </form>
+
+
+ <form action="buynow" method="POST">
+            {% csrf_token %}
+           <td>
+               <input type="hidden" value="{{i.pid.pid}}" name="productid">
+           <button class="btn btn-primary" type="submit">Buy Now</button>
+        </td>
+ </form>
+    </tr>
+
+    {% endfor %}
+  </table>
+
+</body>
+</html>

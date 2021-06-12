@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" type="image/x-icon" href="https://www.vhv.rs/dpng/d/444-4449620_blue-cart-icon-png-transparent-png.png">
+    <title>Product List</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+<script src="https://kit.fontawesome.com/7b5528ef15.js" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap" rel="stylesheet">
+
+    <style>
+        body
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        *
+        {
+            font-family: 'Akaya Telivigala', cursive;
+
+
+
+        }
+
+        ul
+        {
+            list-style: none;
+
+        }
+        ul li i
+        {
+            padding-right: 3px;
+        }
+        a
+        {
+            text-decoration: none;
+            color: #111;
+            font-size: 20px;
+        }
+        h3
+        {
+            font-weight: 700;
+
+        }
+
+
+.search {
+  width: 100%;
+
+  position: relative;
+  display: flex;
+
+
+}
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid #00B4CC;
+  border-right: none;
+  padding: 5px;
+  height: 36px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
+
+}
+
+.searchTerm:focus{
+  color: #00B4CC;
+}
+
+.searchButton {
+  width: 40px;
+  height: 36px;
+  border: 1px solid #00B4CC;
+  background: #00B4CC;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+.row1
+{
+    /*
+    background: url(https://i.pinimg.com/originals/af/8d/63/af8d63a477078732b79ff9d9fc60873f.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;*/
+    padding: 10px;
+    width: 100%;
+}
+
+
+.ratings i {
+    font-size: 16px;
+    color: red
+}
+
+.strike-text {
+    color: red;
+    text-decoration: line-through
+}
+
+.product-image {
+    width: 100%
+}
+
+.dot {
+    height: 7px;
+    width: 7px;
+    margin-left: 6px;
+    margin-right: 6px;
+    margin-top: 3px;
+    background-color: blue;
+    border-radius: 50%;
+    display: inline-block
+}
+
+.spec-1 {
+    color: #938787;
+    font-size: 15px
+}
+
+
+
+.para {
+    font-size: 16px
+}
+/*Resize the wrap to see the search bar change!
+.wrap
+{
+
+
+}
+
+
+    </style>
+</head>
+<body>
+
+<div class="row1">
+<div class="row">
+
+    <div class="col-sm-2" style="
+
+    ">
+        <h6 style="color:#2ECC71;font-size: 25px;"><i class="fas fa-shopping-cart" style="color:#111;font-size: 35px;padding-right: 3px;"></i>productdekho.com</h6>
+    </div>
+
+    <div class="col-sm-10">
+        <div class="wrap">
+            <div class="search">
+                <input type="text" class="searchTerm" placeholder="What are you looking for?">
+                <button  class="searchButton">
+                <i class="fa fa-search"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</div>
+
+
+<hr>
+
+
+<div class="row g-0" style="background: silver;">
+<div class="col-6 col-md-4" style="background: silver;">
+    <h3 style="text-align: center;">Categories</h3>
+    <ul>
+        <li><a href="#"><i class="fas fa-angle-double-right"></i>Electronic Appliances</a></li>
+        <li><a href="#"><i class="fas fa-angle-double-right"></i>Mobiles , Computers</a></li>
+        <li><a href="#"><i class="fas fa-angle-double-right"></i>Car & Motorbike</a></li>
+        <li><a href="#"><i class="fas fa-angle-double-right"></i>Furniture</a></li>
+               <li><hr class="dropdown-divider"></li>
+<li><a href="#"><i class="fas fa-angle-double-right"></i>Men's Fashion</a></li>
+<li><a href="#"><i class="fas fa-angle-double-right"></i>Women's Fashion</a></li>
+<li><a href="#"><i class="fas fa-angle-double-right"></i>Jewellary</a></li>
+<li><a href="#"><i class="fas fa-angle-double-right"></i>Health & Personnel Care</a></li>
+<li><a href="#"><i class="fas fa-angle-double-right"></i>Beauty</a></li>
+       <li><hr class="dropdown-divider"></li>
+
+<li><a href="#"><i class="fas fa-angle-double-right"></i>Sports</a></li>
+<li><a href="#"><i class="fas fa-angle-double-right"></i>Books</a></li>
+<li><a href="#"><i class="fas fa-angle-double-right"></i>Musical Instruments</a></li>
+
+    </ul>
+</div>
+
+
+
+
+
+    <div class="col-sm-6 col-md-8" style="background: silver;" >
+            <div class="container mt-3 mb-5">
+    <div class="d-flex justify-content-center row">
+        <div class="col-md-10">
+
+{% for i in data %}
+            <form class="row p-2 bg-white border rounded mt-3" method="POST" action="details">
+                {% csrf_token %}
+                <input type="hidden" value="{{i.pid}}" name="productid" id="{{i.pid}}">
+                <div class="col-md-3 mt-1">
+                    <img class="img-fluid img-responsive rounded product-image"  src="{{i.pimg.url}}">
+                </div>
+
+                <div class="col-md-6 mt-1">
+                    <h5>{{i.pname}}</h5>
+
+                    <div class="d-flex flex-row">
+                        <div class="ratings mr-2"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div><span>310</span>
+                    </div>
+                    <div class="mt-1 mb-1 spec-1"><span class="dot"></span><span>{{i.category}}</span></div>
+                    <p class="text-justify text-truncate para mb-0">{{i.pdisc}}<br><br></p>
+                </div>
+                <div class="align-items-center align-content-center col-md-3 border-left mt-1">
+                    <div class="d-flex flex-row align-items-center">
+                        <h4 class="mr-1" style="font-family: 'Open Sans', sans-serif;">Rs.{{i.price}}</h4>
+                    </div>
+
+                    <div class="d-flex flex-column mt-4">
+
+
+
+                    <button class="btn btn-primary mt-3" type="submit">View Details</button>
+
+                </div>
+                </div>
+            </form>
+
+
+
+
+{% endfor %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+    </div>
+</div>
+
+
+
+
+    </div>
+</div>
+</body>
+</html><!--
+<div class="row g-0">
+  <div class="col-sm-6 col-md-8">.col-sm-6 .col-md-8</div>
+  <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+</div>

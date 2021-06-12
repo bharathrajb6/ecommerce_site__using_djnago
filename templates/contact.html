@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="https://www.vhv.rs/dpng/d/444-4449620_blue-cart-icon-png-transparent-png.png">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="https://kit.fontawesome.com/7b5528ef15.js" crossorigin="anonymous"></script>
+
+
+
+    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css'>
+    <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js'></script>
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <title>Contact Us</title>
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+* {
+    box-sizing: border-box
+}
+
+body {
+background:url(https://wallpaperaccess.com/full/195768.jpg);
+background-repeat:no-repeat;
+background-size:cover;
+background-attachment:fixed;
+}
+
+.container {
+    background-color: blanchedalmond;
+    border-radius: 10px
+}
+
+h2 {
+    color: navy
+}
+
+.text-muted {
+    font-family: 'Ubuntu', sans-serif
+}
+
+.fa-map-marker,
+.fa-phone,
+.fa-envelope {
+    font-size: 25px;
+    font-weight: bold
+}
+
+.icon {
+    color: rgb(105, 27, 179)
+}
+
+.contact:hover {
+    background-color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative
+}
+
+form .container {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto
+}
+
+input,
+textarea,
+.form-control {
+    outline: none;
+    border: none
+}
+
+.input-field {
+    border: 1px solid #ddd;
+    padding: 5px;
+    border-radius: 5px
+}
+
+.input-field:hover {
+    border: 2px solid rgb(105, 27, 179);
+    color: rgb(105, 27, 179);
+    cursor: pointer
+}
+
+label {
+    font-weight: 500
+}
+
+.fa-mobile {
+    font-size: 20px
+}
+
+#msg {
+    height: 220px
+}
+
+.btn {
+    background-color: rgb(105, 27, 179);
+    color: #fff;
+    padding: 5px 10px;
+    width: 200px;
+    margin: 10px auto
+}
+
+.mobile-info {
+    display: none
+}
+
+@media(min-width:992px) and (max-width:1199px) {
+    form {
+        width: 75%
+    }
+
+    .container {
+        margin-top: 50px
+    }
+}
+
+@media(max-width:767px) {
+    .mobile-info {
+        display: inline
+    }
+
+    .contact-info {
+        display: none
+    }
+
+    .contact {
+        margin: 10px 0;
+        border: 1px solid rgb(105, 27, 179);
+        border-radius: 5px
+    }
+}
+
+.message
+{
+list-style:none;
+width:100%;
+
+}
+    </style>
+</head>
+<body>
+   {% for message in messages %}
+    <div class="message">
+       <div class="alert alert-primary" role="alert">
+{{message}}
+</div>
+    </div>
+    {% endfor %}
+<div class="container mt-xl-5 mb-5">
+    <div class="d-flex justify-content-center pt-5">
+        <h2 class="font-weight-bold">Get in touch!</h2>
+    </div>
+    <div class="d-flex justify-content-center text-muted"></div>
+    <div class="d-md-flex flex-md-row justify-content-center py-4">
+        <div class="d-md-flex flex-md-column contact px-4">
+            <div class="d-md-flex justify-content-center icon py-2"> <span class="fa fa-map-marker"></span> <span class="mobile-info text-dark p-2 pb-3">102 street 2714 Don</span> </div>
+            <div class="contact-info">Ujire , Dakshina Kannada - 574240</div>
+        </div>
+        <div class="d-flex flex-column contact px-4">
+            <div class="d-md-flex justify-content-center icon py-2"> <span class="fa fa-phone"></span> <span class="mobile-info text-dark p-2 pb-3">+02 1234 567</span> </div>
+            <div class="contact-info">+91 8277234718</div>
+        </div>
+        <div class="d-flex flex-column contact px-4">
+            <div class="d-md-flex justify-content-center icon py-2"> <span class="fa fa-envelope"></span> <span class="mobile-info text-dark p-2 pb-3">hello@flowbase.com</span> </div>
+            <div class="contact-info">support@productdekho.com</div>
+        </div>
+    </div>
+
+    <div class="d-flex flex-row justify-content-center">
+        <form class="w-xl-50 w-lg-75" action="contact" method="POST">
+            {% csrf_token%}
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group"> <label for="name">Your Name</label>
+                            <div class="input-field"> <span class="fa fa-user-o p-2 border-right"></span>
+                                <input type="text" name="name"  required> </div>
+                        </div>
+                        <div class="form-group"> <label for="name">Mail</label>
+                            <div class="input-field"> <span class="fa fa-envelope-o p-2"></span>
+                                <input type="email"  name="email"  required> </div>
+                        </div>
+                        <div class="form-group"> <label for="name">Phone</label>
+                            <div class="input-field"> <span class="fa fa-mobile p-2"></span> <input type="tel" name="phone"required> </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group"> <label for="msg">Message</label>
+                            <div class="input-field bg-light"> <textarea required name="message" id="msg" cols="10" rows="9" class="form-control bg-light" placeholder="Your Message"></textarea> </div>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-row justify-content-center w-100">
+                        <input type="submit" value="Send Message" class="btn"> </div>
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+</div>
+</body>
+</html>
